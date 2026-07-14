@@ -76,7 +76,7 @@ export function Home({ lang }: { lang: Language }) {
             </span>
             <h1>
               {lang === 'ar' ? (
-                <>المظلة الوطنية <em>للمدارس الإسلامية</em> والنموذجية</>
+                <>مظلة وطنية <em>للمدارس الإسلامية</em> والنموذجية</>
               ) : (
                 <>La plateforme nationale des <em>établissements islamiques</em> et modèles</>
               )}
@@ -101,9 +101,9 @@ export function Home({ lang }: { lang: Language }) {
             </div>
           </div>
 
-          <div className="hero__visual" aria-label={lang === 'ar' ? 'طلاب في بيئة تعليمية' : 'Élèves dans un environnement scolaire'}>
+          <div className="hero__visual" aria-label={lang === 'ar' ? 'طلاب أمام المقر الحديث لرابطة المدارس الإسلامية والنموذجية' : 'Élèves devant le siège moderne de la Ligue'}>
             <div className="hero__image-frame">
-              <img src="/assets/students-illustration.svg" alt={lang === 'ar' ? 'طلاب في بيئة تعليمية' : 'Élèves dans un environnement scolaire'} />
+              <img src="/assets/lecim-headquarters-hero.webp" alt={lang === 'ar' ? 'طلاب أمام المقر الحديث لرابطة المدارس الإسلامية والنموذجية في كوت ديفوار' : 'Élèves devant le siège moderne de la Ligue en Côte d’Ivoire'} />
               <div className="hero__image-gradient" />
             </div>
             <div className="floating-card floating-card--top">
