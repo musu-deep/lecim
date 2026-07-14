@@ -101,9 +101,9 @@ export function Home({ lang }: { lang: Language }) {
             </div>
           </div>
 
-          <div className="hero__visual" aria-label={lang === 'ar' ? 'طالب في بيئة تعليمية' : 'Élève en environnement scolaire'}>
+          <div className="hero__visual" aria-label={lang === 'ar' ? 'طلاب في بيئة تعليمية' : 'Élèves dans un environnement scolaire'}>
             <div className="hero__image-frame">
-              <img src="https://www.lecimschool.com/wp-content/uploads/2025/02/0005.png" alt={lang === 'ar' ? 'طالبة في مدرسة إسلامية' : 'Élève dans une école islamique'} />
+              <img src="/assets/students-illustration.svg" alt={lang === 'ar' ? 'طلاب في بيئة تعليمية' : 'Élèves dans un environnement scolaire'} />
               <div className="hero__image-gradient" />
             </div>
             <div className="floating-card floating-card--top">
