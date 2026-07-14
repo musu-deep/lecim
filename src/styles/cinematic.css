@@ -1,4 +1,8 @@
-/* Premium cinematic hero using a native high-resolution repository asset */
+/* Premium cinematic hero using a verified browser-decoded image payload */
+:root{
+  --hero-live-image:none;
+}
+
 .hero{
   position:relative;
   isolation:isolate;
@@ -13,12 +17,17 @@
   position:absolute;
   inset:0;
   z-index:-3;
-  background-image:url('/assets/lecim-headquarters-hero.webp');
+  background-image:var(--hero-live-image);
   background-size:cover;
   background-position:center;
-  opacity:.24;
+  opacity:0;
   transform:scale(1.01);
-  filter:saturate(.94) contrast(1.03);
+  filter:saturate(.96) contrast(1.03);
+  transition:opacity .35s ease;
+}
+
+.hero-image-ready .hero::after{
+  opacity:.24;
 }
 
 .hero::before{
@@ -92,7 +101,7 @@
   border:1px solid rgba(255,255,255,.16);
   border-radius:28px 28px 54px 28px;
   background-color:#244f79;
-  background-image:url('/assets/lecim-headquarters-hero.webp');
+  background-image:var(--hero-live-image);
   background-size:cover;
   background-position:center;
   box-shadow:0 26px 64px rgba(0,0,0,.28);
@@ -108,6 +117,11 @@
   object-position:center;
   opacity:1;
   image-rendering:auto;
+  transition:opacity .2s ease;
+}
+
+.hero-image-ready .hero__image-frame img{
+  opacity:0;
 }
 
 .hero__image-frame::after,
@@ -148,7 +162,7 @@
   background-color:#17466f;
   background-image:
     linear-gradient(to top,rgba(4,20,43,.94),rgba(4,20,43,.16) 68%),
-    url('/assets/lecim-headquarters-hero.webp');
+    var(--hero-live-image);
   background-size:cover;
   background-position:center;
   text-align:start;
