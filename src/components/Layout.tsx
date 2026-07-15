@@ -5,7 +5,7 @@ import { contact, navItems } from '../data';
 import { languageMeta, t } from '../i18n';
 import type { Language } from '../types';
 
-const OFFICIAL_LOGO = '/api/lecim-official-logo?v=12';
+const OFFICIAL_LOGO = '/assets/lecim-logo.png?v=13';
 
 export function Layout({ children, lang }: { children: ReactNode; lang: Language }) {
   const [open, setOpen] = useState(false);
