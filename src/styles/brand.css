@@ -1,0 +1,10 @@
+/* Official LECIM brand asset overrides */
+.brand img,
+.vision-panel > img {
+  object-fit: contain;
+  background: #fff;
+}
+
+.vision-panel > img {
+  content: url('/api/lecim-logo');
+}
