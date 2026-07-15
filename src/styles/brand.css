@@ -14,32 +14,16 @@
 }
 
 .brand .brand__logo {
-  width: 82px;
-  height: 82px;
-  min-width: 82px;
-  flex: 0 0 82px;
-  display: grid;
-  place-items: center;
-  padding: 5px;
-  line-height: 1;
-  border-radius: 18px;
-  background: #fff;
-  overflow: visible;
-}
-
-.brand .brand__logo img {
+  width: 78px;
+  height: 78px;
+  min-width: 78px;
+  flex: 0 0 78px;
   display: block;
-  width: 72px;
-  height: 72px;
-  max-width: none;
-  object-fit: contain;
-  object-position: center;
-  padding: 0;
-  margin: 0;
-  background: transparent;
-  border-radius: 0;
-  clip-path: none;
-  transform: none;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 16px;
   overflow: visible;
 }
 
@@ -51,21 +35,15 @@
 }
 
 .brand--footer .brand__logo {
-  width: 94px;
-  height: 94px;
-  min-width: 94px;
-  flex-basis: 94px;
-}
-
-.brand--footer .brand__logo img {
-  width: 84px;
-  height: 84px;
+  width: 92px;
+  height: 92px;
+  min-width: 92px;
+  flex-basis: 92px;
 }
 
 .vision-panel > img {
   object-fit: contain;
   background: #fff;
-  content: url('/api/lecim-logo?v=4');
 }
 
 @media (max-width: 1180px) {
@@ -74,16 +52,10 @@
   }
 
   .brand .brand__logo {
-    width: 72px;
-    height: 72px;
-    min-width: 72px;
-    flex-basis: 72px;
-    padding: 4px;
-  }
-
-  .brand .brand__logo img {
-    width: 64px;
-    height: 64px;
+    width: 68px;
+    height: 68px;
+    min-width: 68px;
+    flex-basis: 68px;
   }
 }
 
@@ -93,15 +65,9 @@
   }
 
   .brand .brand__logo {
-    width: 64px;
-    height: 64px;
-    min-width: 64px;
-    flex-basis: 64px;
-    padding: 3px;
-  }
-
-  .brand .brand__logo img {
-    width: 58px;
-    height: 58px;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    flex-basis: 60px;
   }
 }
