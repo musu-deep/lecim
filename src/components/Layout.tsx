@@ -49,7 +49,7 @@ export function Layout({ children, lang }: { children: ReactNode; lang: Language
         <div className="container header__inner">
           <Link className="brand" to={`/${lang}`} aria-label="LECIM">
             <span className="brand__logo" aria-hidden="true">
-              <img src="/api/lecim-logo?v=4" alt="" />
+              <img src="/assets/lecim-logo-full.svg?v=5" alt="" />
             </span>
             <span className="brand__text">
               <strong>{lang === 'ar' ? 'رابطة المدارس الإسلامية' : 'Ligue des Établissements'}</strong>
@@ -103,7 +103,7 @@ export function Layout({ children, lang }: { children: ReactNode; lang: Language
           <div className="footer__about">
             <div className="brand brand--footer">
               <span className="brand__logo" aria-hidden="true">
-                <img src="/api/lecim-logo?v=4" alt="" />
+                <img src="/assets/lecim-logo-full.svg?v=5" alt="" />
               </span>
               <span className="brand__text">
                 <strong>LECIM</strong>
