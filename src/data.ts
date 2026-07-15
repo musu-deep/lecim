@@ -6,7 +6,7 @@ export const navItems: NavItem[] = [
   { path: 'schools', label: { ar: 'المدارس الأعضاء', fr: 'Établissements' } },
   { path: 'services', label: { ar: 'الخدمات', fr: 'Services' } },
   { path: 'exams', label: { ar: 'الامتحانات', fr: 'Examens' } },
-  { path: 'projects', label: { ar: 'المشروعات', fr: 'Projets' } },
+  { path: 'projects', label: { ar: 'مبادرات الرابطة', fr: 'Initiatives' } },
   { path: 'membership', label: { ar: 'العضوية', fr: 'Adhésion' } },
   { path: 'media', label: { ar: 'المركز الإعلامي', fr: 'Actualités' } },
   { path: 'contact', label: { ar: 'تواصل معنا', fr: 'Contact' } },
