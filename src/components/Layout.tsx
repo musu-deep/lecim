@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { Globe2, Mail, Menu, Phone, X } from 'lucide-react';
 import { contact, navItems } from '../data';
 import { languageMeta, t } from '../i18n';
+import { LECIM_LOGO_DATA_URI } from '../assets/lecimLogoData';
 import type { Language } from '../types';
 
 export function Layout({ children, lang }: { children: ReactNode; lang: Language }) {
@@ -15,6 +16,11 @@ export function Layout({ children, lang }: { children: ReactNode; lang: Language
     document.documentElement.lang = lang;
     document.documentElement.dir = meta.dir;
     document.body.dataset.lang = lang;
+    document
+      .querySelectorAll<HTMLLinkElement>("link[rel~='icon'], link[rel='apple-touch-icon']")
+      .forEach((link) => {
+        link.href = LECIM_LOGO_DATA_URI;
+      });
     setOpen(false);
   }, [lang, meta.dir, location.pathname]);
 
@@ -26,6 +32,7 @@ export function Layout({ children, lang }: { children: ReactNode; lang: Language
   }, [location.pathname, otherLanguage]);
 
   const switchLanguage = () => navigate(translatedPath);
+  const logoStyle = { backgroundImage: `url(${LECIM_LOGO_DATA_URI})` };
 
   return (
     <div className="site-shell">
@@ -48,9 +55,7 @@ export function Layout({ children, lang }: { children: ReactNode; lang: Language
       <header className="header">
         <div className="container header__inner">
           <Link className="brand" to={`/${lang}`} aria-label="LECIM">
-            <span className="brand__logo" aria-hidden="true">
-              <img src="/assets/lecim-logo-site.png?v=6" alt="" />
-            </span>
+            <span className="brand__logo" aria-hidden="true" style={logoStyle} />
             <span className="brand__text">
               <strong>{lang === 'ar' ? 'رابطة المدارس الإسلامية' : 'Ligue des Établissements'}</strong>
               <small>{lang === 'ar' ? 'والنموذجية في كوت ديفوار' : 'Confessionnels Islamiques'}</small>
@@ -102,9 +107,7 @@ export function Layout({ children, lang }: { children: ReactNode; lang: Language
         <div className="container footer__grid">
           <div className="footer__about">
             <div className="brand brand--footer">
-              <span className="brand__logo" aria-hidden="true">
-                <img src="/assets/lecim-logo-site.png?v=6" alt="" />
-              </span>
+              <span className="brand__logo" aria-hidden="true" style={logoStyle} />
               <span className="brand__text">
                 <strong>LECIM</strong>
                 <small>{lang === 'ar' ? 'نحو تعليم راسخ ومواطن مسؤول' : 'Pour une éducation solide et citoyenne'}</small>
