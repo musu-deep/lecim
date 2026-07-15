@@ -4,55 +4,104 @@
   align-items: center;
 }
 
-.header__inner,
-.header {
+.header,
+.header__inner {
   overflow: visible;
 }
 
-.brand > img {
-  display: block !important;
-  width: 72px !important;
-  height: 72px !important;
-  min-width: 72px;
-  flex: 0 0 72px;
-  aspect-ratio: 1 / 1;
-  object-fit: contain !important;
-  object-position: center !important;
-  padding: 2px;
-  background: #fff;
-  border-radius: 50%;
-  clip-path: none !important;
-  transform: none !important;
-  overflow: visible;
+.header__inner {
+  min-height: 94px;
 }
 
-.brand--footer > img {
-  width: 82px !important;
-  height: 82px !important;
+.brand .brand__logo {
+  width: 82px;
+  height: 82px;
   min-width: 82px;
-  flex-basis: 82px;
+  flex: 0 0 82px;
+  display: grid;
+  place-items: center;
+  padding: 5px;
+  line-height: 1;
+  border-radius: 18px;
+  background: #fff;
+  overflow: visible;
+}
+
+.brand .brand__logo img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border-radius: 0;
+  clip-path: none;
+  transform: none;
+  overflow: visible;
+}
+
+.brand .brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+  min-width: 0;
+}
+
+.brand--footer .brand__logo {
+  width: 94px;
+  height: 94px;
+  min-width: 94px;
+  flex-basis: 94px;
+}
+
+.brand--footer .brand__logo img {
+  width: 84px;
+  height: 84px;
 }
 
 .vision-panel > img {
   object-fit: contain;
   background: #fff;
-  content: url('/api/lecim-logo');
+  content: url('/api/lecim-logo?v=4');
 }
 
 @media (max-width: 1180px) {
-  .brand > img {
-    width: 64px !important;
-    height: 64px !important;
-    min-width: 64px;
-    flex-basis: 64px;
+  .header__inner {
+    min-height: 88px;
+  }
+
+  .brand .brand__logo {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    flex-basis: 72px;
+    padding: 4px;
+  }
+
+  .brand .brand__logo img {
+    width: 64px;
+    height: 64px;
   }
 }
 
 @media (max-width: 760px) {
-  .brand > img {
-    width: 58px !important;
-    height: 58px !important;
-    min-width: 58px;
-    flex-basis: 58px;
+  .header__inner {
+    min-height: 80px;
+  }
+
+  .brand .brand__logo {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    flex-basis: 64px;
+    padding: 3px;
+  }
+
+  .brand .brand__logo img {
+    width: 58px;
+    height: 58px;
   }
 }
