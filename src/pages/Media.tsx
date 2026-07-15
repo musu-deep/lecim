@@ -6,7 +6,7 @@ import type { Language } from '../types';
 export function Media({ lang }: { lang: Language }) {
   return (
     <>
-      <PageHero eyebrow={lang === 'ar' ? 'المركز الإعلامي' : 'Actualités'} title={lang === 'ar' ? 'أخبار موثقة وإعلانات تهم المجتمع التعليمي' : 'Actualités et communiqués du réseau éducatif'} text={lang === 'ar' ? 'منصة موحدة لأخبار الرابطة والامتحانات والاجتماعات والبرامج والشراكات.' : 'Un espace unique pour les actualités, examens, réunions, programmes et partenariats.'} />
+      <PageHero eyebrow={lang === 'ar' ? 'المركز الإعلامي' : 'Actualités'} title={lang === 'ar' ? 'أخبار وإعلانات تهم المجتمع التعليمي' : 'Actualités et communiqués du réseau éducatif'} text={lang === 'ar' ? 'منصة موحدة لأخبار الرابطة والامتحانات والاجتماعات والبرامج والشراكات.' : 'Un espace unique pour les actualités, examens, réunions, programmes et partenariats.'} />
       <section className="section section--soft">
         <div className="container media-layout">
           <div className="media-feature">
