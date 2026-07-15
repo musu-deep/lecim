@@ -1,0 +1,1 @@
+Use binary blob upload for lecim-logo-site.png
