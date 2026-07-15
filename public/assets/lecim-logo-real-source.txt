@@ -1,0 +1,1 @@
+Real logo binary will be committed as a Git blob in the next commit.
