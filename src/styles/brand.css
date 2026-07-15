@@ -1,10 +1,58 @@
 /* Official LECIM brand asset overrides */
-.brand img,
-.vision-panel > img {
-  object-fit: contain;
+.brand {
+  overflow: visible;
+  align-items: center;
+}
+
+.header__inner,
+.header {
+  overflow: visible;
+}
+
+.brand > img {
+  display: block !important;
+  width: 72px !important;
+  height: 72px !important;
+  min-width: 72px;
+  flex: 0 0 72px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain !important;
+  object-position: center !important;
+  padding: 2px;
   background: #fff;
+  border-radius: 50%;
+  clip-path: none !important;
+  transform: none !important;
+  overflow: visible;
+}
+
+.brand--footer > img {
+  width: 82px !important;
+  height: 82px !important;
+  min-width: 82px;
+  flex-basis: 82px;
 }
 
 .vision-panel > img {
+  object-fit: contain;
+  background: #fff;
   content: url('/api/lecim-logo');
+}
+
+@media (max-width: 1180px) {
+  .brand > img {
+    width: 64px !important;
+    height: 64px !important;
+    min-width: 64px;
+    flex-basis: 64px;
+  }
+}
+
+@media (max-width: 760px) {
+  .brand > img {
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px;
+    flex-basis: 58px;
+  }
 }
