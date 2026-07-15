@@ -48,8 +48,10 @@ export function Layout({ children, lang }: { children: ReactNode; lang: Language
       <header className="header">
         <div className="container header__inner">
           <Link className="brand" to={`/${lang}`} aria-label="LECIM">
-            <img src="/api/lecim-logo" alt="LECIM" />
-            <span>
+            <span className="brand__logo" aria-hidden="true">
+              <img src="/api/lecim-logo?v=4" alt="" />
+            </span>
+            <span className="brand__text">
               <strong>{lang === 'ar' ? 'رابطة المدارس الإسلامية' : 'Ligue des Établissements'}</strong>
               <small>{lang === 'ar' ? 'والنموذجية في كوت ديفوار' : 'Confessionnels Islamiques'}</small>
             </span>
@@ -100,8 +102,10 @@ export function Layout({ children, lang }: { children: ReactNode; lang: Language
         <div className="container footer__grid">
           <div className="footer__about">
             <div className="brand brand--footer">
-              <img src="/api/lecim-logo" alt="LECIM" />
-              <span>
+              <span className="brand__logo" aria-hidden="true">
+                <img src="/api/lecim-logo?v=4" alt="" />
+              </span>
+              <span className="brand__text">
                 <strong>LECIM</strong>
                 <small>{lang === 'ar' ? 'نحو تعليم راسخ ومواطن مسؤول' : 'Pour une éducation solide et citoyenne'}</small>
               </span>
