@@ -1,9 +1,9 @@
 import { BookMarked, Building, CircleDollarSign, Laptop2, LibraryBig, School, UsersRound } from 'lucide-react';
-import { PageHero, SectionHeading } from '../components/Ui';
+import { PageHero } from '../components/Ui';
 import type { Language } from '../types';
 
 export function Projects({ lang }: { lang: Language }) {
-  const projects = [
+  const initiatives = [
     [Building, 'برنامج جاهزية المدارس للاعتراف الرسمي', 'Programme de préparation à la reconnaissance', 'تقييم الفجوات، تطوير الملفات، تحسين البنية التعليمية، ومتابعة استيفاء المعايير.', 'Diagnostic, dossiers, amélioration des conditions d’enseignement et suivi de conformité.', '35%'],
     [Laptop2, 'المنصة الوطنية لبيانات المدارس', 'Plateforme nationale des données scolaires', 'قاعدة بيانات موحدة للمدارس والطلاب والمعلمين والامتحانات ومؤشرات الأداء.', 'Une base centralisée pour les écoles, élèves, enseignants, examens et indicateurs.', '20%'],
     [UsersRound, 'أكاديمية القيادات والمعلمين', 'Académie des cadres et enseignants', 'مسارات تدريب وشهادات مهنية لرفع كفاءة الإدارة والتدريس والتقويم.', 'Parcours de formation et certifications professionnelles en gestion et pédagogie.', '45%'],
@@ -14,10 +14,16 @@ export function Projects({ lang }: { lang: Language }) {
 
   return (
     <>
-      <PageHero eyebrow={lang === 'ar' ? 'المشروعات' : 'Projets'} title={lang === 'ar' ? 'مشروعات قابلة للشراكة تصنع أثرًا تعليميًا مستدامًا' : 'Des projets structurants ouverts aux partenariats'} text={lang === 'ar' ? 'محفظة مشروعات تربوية ورقمية ومؤسسية، مصممة بمخرجات ومؤشرات واحتياجات تمويل واضحة.' : 'Un portefeuille de projets éducatifs, numériques et institutionnels, avec résultats et besoins clairement définis.'} />
+      <PageHero
+        eyebrow={lang === 'ar' ? 'مبادرات الرابطة' : 'Initiatives de la Ligue'}
+        title={lang === 'ar' ? 'مبادرات وطنية تصنع أثرًا تعليميًا مستدامًا' : 'Des initiatives nationales pour un impact éducatif durable'}
+        text={lang === 'ar'
+          ? 'محفظة مبادرات تربوية ورقمية ومؤسسية تقودها الرابطة، وتفتح من خلالها فرص الشراكة والدعم والتمويل.'
+          : 'Un portefeuille d’initiatives éducatives, numériques et institutionnelles porté par la Ligue et ouvert aux partenariats.'}
+      />
       <section className="section section--soft">
         <div className="container projects-grid">
-          {projects.map(([Icon, ar, fr, arText, frText, progress], index) => (
+          {initiatives.map(([Icon, ar, fr, arText, frText, progress], index) => (
             <article className="project-card" key={ar}>
               <div className="project-card__head"><span><Icon size={25} /></span><small>0{index + 1}</small></div>
               <h3>{lang === 'ar' ? ar : fr}</h3>
@@ -32,8 +38,10 @@ export function Projects({ lang }: { lang: Language }) {
         <div className="container funding-model">
           <div>
             <span className="eyebrow">{lang === 'ar' ? 'نموذج الشراكة' : 'Modèle de partenariat'}</span>
-            <h2>{lang === 'ar' ? 'من الفكرة إلى مشروع قابل للتمويل والتنفيذ' : 'De l’idée à un projet finançable et opérationnel'}</h2>
-            <p>{lang === 'ar' ? 'تقدم الرابطة لكل مشروع وثيقة مفهوم، تحليل احتياج، موازنة، خطة تنفيذ، مؤشرات، وإطار حوكمة وتقارير.' : 'Chaque projet peut être documenté par une note conceptuelle, un diagnostic, un budget, un plan de mise en œuvre, des indicateurs et un cadre de gouvernance.'}</p>
+            <h2>{lang === 'ar' ? 'من المبادرة إلى برنامج قابل للتمويل والتنفيذ' : 'De l’initiative à un programme finançable et opérationnel'}</h2>
+            <p>{lang === 'ar'
+              ? 'تقدم الرابطة لكل مبادرة وثيقة مفهوم، وتحليل احتياج، وموازنة، وخطة تنفيذ، ومؤشرات قياس، وإطار حوكمة وتقارير.'
+              : 'Chaque initiative peut être documentée par une note conceptuelle, un diagnostic, un budget, un plan de mise en œuvre, des indicateurs et un cadre de gouvernance.'}</p>
           </div>
           <div className="funding-cards">
             <div><CircleDollarSign /><strong>{lang === 'ar' ? 'تمويل ومنح' : 'Financement et subventions'}</strong></div>
