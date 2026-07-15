@@ -5,7 +5,7 @@ import { contact, navItems } from '../data';
 import { languageMeta, t } from '../i18n';
 import type { Language } from '../types';
 
-const ORIGINAL_LOGO = '/assets/lecim-logo-official.png?v=11';
+const OFFICIAL_LOGO = '/api/lecim-official-logo?v=12';
 
 export function Layout({ children, lang }: { children: ReactNode; lang: Language }) {
   const [open, setOpen] = useState(false);
@@ -20,7 +20,7 @@ export function Layout({ children, lang }: { children: ReactNode; lang: Language
     document
       .querySelectorAll<HTMLLinkElement>("link[rel~='icon'], link[rel='apple-touch-icon']")
       .forEach((link) => {
-        link.href = ORIGINAL_LOGO;
+        link.href = OFFICIAL_LOGO;
       });
     setOpen(false);
   }, [lang, meta.dir, location.pathname]);
@@ -56,7 +56,7 @@ export function Layout({ children, lang }: { children: ReactNode; lang: Language
         <div className="container header__inner">
           <Link className="brand" to={`/${lang}`} aria-label="LECIM">
             <span className="brand__logo" aria-hidden="true">
-              <img src={ORIGINAL_LOGO} alt="" />
+              <img src={OFFICIAL_LOGO} alt="" width="256" height="256" />
             </span>
             <span className="brand__text">
               <strong>{lang === 'ar' ? 'رابطة المدارس الإسلامية' : 'Ligue des Établissements'}</strong>
@@ -110,7 +110,7 @@ export function Layout({ children, lang }: { children: ReactNode; lang: Language
           <div className="footer__about">
             <div className="brand brand--footer">
               <span className="brand__logo" aria-hidden="true">
-                <img src={ORIGINAL_LOGO} alt="" />
+                <img src={OFFICIAL_LOGO} alt="" width="256" height="256" />
               </span>
               <span className="brand__text">
                 <strong>LECIM</strong>
