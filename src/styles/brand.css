@@ -19,11 +19,11 @@
   min-width: 78px;
   flex: 0 0 78px;
   display: block;
-  background-color: #fff;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  border-radius: 16px;
+  border-radius: 50%;
   overflow: visible;
 }
 
@@ -43,7 +43,7 @@
 
 .vision-panel > img {
   object-fit: contain;
-  background: #fff;
+  background: transparent;
 }
 
 @media (max-width: 1180px) {
