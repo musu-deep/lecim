@@ -1,31 +1,92 @@
-/* Keep the official circular LECIM mark fully visible across the site. */
-.brand img{
-  width:70px;
-  height:70px;
-  flex:0 0 70px;
-  object-fit:contain;
-  object-position:center;
-  border-radius:50%;
-  background:#fff;
+/* Final official LECIM logo treatment: exact image, no clipping, no redraw. */
+.header,
+.header__inner,
+.brand,
+.brand__logo{
+  overflow:visible!important;
 }
 
-.brand--footer img{
-  width:76px;
-  height:76px;
-  flex-basis:76px;
+.header__inner{
+  min-height:100px!important;
+}
+
+.brand .brand__logo{
+  width:88px!important;
+  height:88px!important;
+  min-width:88px!important;
+  flex:0 0 88px!important;
+  display:grid!important;
+  place-items:center!important;
+  padding:2px!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  clip-path:none!important;
+}
+
+.brand .brand__logo img,
+.brand img{
+  display:block!important;
+  width:84px!important;
+  height:84px!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  clip-path:none!important;
+  transform:none!important;
+  filter:drop-shadow(0 2px 3px rgba(8,31,61,.12));
+}
+
+.brand--footer .brand__logo{
+  width:102px!important;
+  height:102px!important;
+  min-width:102px!important;
+  flex-basis:102px!important;
+}
+
+.brand--footer .brand__logo img{
+  width:98px!important;
+  height:98px!important;
 }
 
 .vision-panel > img{
-  object-fit:contain;
-  object-position:center;
-  border-radius:50%;
-  background:#fff;
+  object-fit:contain!important;
+  object-position:center!important;
+  border-radius:0!important;
+  background:transparent!important;
+}
+
+@media(max-width:1180px){
+  .header__inner{min-height:96px!important}
+  .brand .brand__logo{
+    width:82px!important;
+    height:82px!important;
+    min-width:82px!important;
+    flex-basis:82px!important;
+  }
+  .brand .brand__logo img,
+  .brand img{
+    width:78px!important;
+    height:78px!important;
+  }
 }
 
 @media(max-width:760px){
+  .header__inner{min-height:94px!important}
+  .brand .brand__logo{
+    width:78px!important;
+    height:78px!important;
+    min-width:78px!important;
+    flex-basis:78px!important;
+  }
+  .brand .brand__logo img,
   .brand img{
-    width:58px;
-    height:58px;
-    flex-basis:58px;
+    width:74px!important;
+    height:74px!important;
   }
 }
